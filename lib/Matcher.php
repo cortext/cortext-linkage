@@ -20,8 +20,8 @@ class Matcher{
     private $matches;
 
     /**
-    * contructor 
-    */
+     * constructor
+     */
     public function __construct($matchingParams = null, $db){
         $this->log("matcher created");
         if($matchingParams != null) { 
@@ -99,6 +99,9 @@ class Matcher{
         }
     }
 
+    /**
+     * logging
+     */
     public function log($message){
         echo "\n<br><pre>[matcher]".$message."</pre>"; //todo use a real logger
     }

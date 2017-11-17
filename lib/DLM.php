@@ -19,6 +19,10 @@ class DLM{
     private $matches;
     private $db; //todo add a real db engine
 
+    /**
+     * constructor
+     * adds a new Matcher, Linker and Importer
+     */
     public function __construct($matcherParams, $dataSource, &$db){
         $this->db = $db;
         $this->matcher = new Matcher($matcherParams,$db);
@@ -29,6 +33,9 @@ class DLM{
         $this->log(print_r($this, true));
     }
 
+    /**
+     * Imports the reference list
+     */
     public function importRefData($source){
         //importing data into db
         $this->log("importing ref: $source...");
@@ -37,6 +44,9 @@ class DLM{
 
     }
 
+    /**
+     * Imports the external list
+     */
     public function importExternalData($source){
         //importing data into db
         $this->log("importing external: $source...");
@@ -45,22 +55,34 @@ class DLM{
 
     }
 
+    /**
+     * Runs the Matcher 
+     */
     public function match(){
         $this->log("matching");
         $this->matcher->createMatching();
         $this->matches = $this->matcher->run();
     }
 
+    /**
+     * Runs the linker
+     */
     public function link(){
         $this->linker->link();
     }
 
+    /**
+     * Display the matches (in stdout)
+     */
     public function displayMatches()
     {
         echo "<h1>List of matches found</h1>";
         print_r($this->matches);
     }
 
+    /**
+     * logging
+     */
     public function log($message){
         echo "\n<pre>[dlm] ".$message."</pre>"; //todo use a real logger
     }

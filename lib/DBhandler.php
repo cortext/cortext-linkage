@@ -11,10 +11,16 @@ Class DBHandler{
     private $db;
     private $databaseName;
 
+    /**
+     * constructor
+     */
     public function __construct(){
         $this->dbConnect();
     }
 
+    /**
+     * returns the db instance
+     */
     public function getDB(){
         return $this->db;
     }
@@ -27,7 +33,7 @@ Class DBHandler{
     }
 
     /**
-    * connect to datbase (for now Sqlite without password)
+    * create a new database (for now Sqlite without password)
     */
     private function dbConnect(){
         $this->databaseName = date("Ymd-His")."-".uniqid().'.db';

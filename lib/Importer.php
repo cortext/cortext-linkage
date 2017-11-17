@@ -9,6 +9,10 @@
 
 class Importer{
     private $db;
+
+    /**
+     * constructor
+     */
     public function __construct($db){
         $this->db = $db;
     }
