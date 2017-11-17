@@ -17,8 +17,10 @@ The parameters for the matcher can be set in the call for its construct, see ind
 - refFieldToMatch: reference list field to match against
 - externalFieldToMatch: external list field to match
 - externalTable: external list custim table name (for now you have to use the name of the file with extension, in small caps without the special characters, eg. 'demoRef.csv' becomes 'demorefcsv' )
-- refTable
-- refIdField
+- refTable: reference table (same remark as above)
+- refIdField: the refence list identifier that should be put in the matching table
+
+The lists files has to be in the csv format, with tabulation as delimiter and no enclosure for texts (it will be customizable in the future). The files have to be in the ./data folder.
 
 ## Todo
 
