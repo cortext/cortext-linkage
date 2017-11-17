@@ -20,7 +20,7 @@ The parameters for the matcher can be set in the call for its construct, see ind
 - refTable: reference table (same remark as above)
 - refIdField: the refence list identifier that should be put in the matching table
 
-The lists files has to be in the csv format, with tabulation as delimiter and no enclosure for texts (it will be customizable in the future). The files have to be in the ./data folder.
+The lists files has to be in the csv format, with tabulation as delimiter and no enclosure for texts (it will be customizable in the future). The files have to be in the ./data folder. The external list should have at least one field with a list of entities to be matched. The refence list shoud have an identifier and at least another field to match external against.
 
 ## Todo
 
