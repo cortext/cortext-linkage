@@ -25,7 +25,7 @@ The lists files has to be in the csv format, with tabulation as delimiter and no
 ## Todo
 
 - Code Comments and documentation
-- Finalize the Matcher class to produce table with id to id match, not only name (this implies that some sort of unique id is provided by the external list)
+- Finalize the Matcher class to produce table with id to id match, not only name (this implies that some sort of unique id is provided by the external list). Add a parmeter if the external list's id is of the same origin of the refence list's one.
 - Importer should take the params for creating tables
 - Params should first be passed to dlm and then used by importer, matcher and linker
 - Add multi column matching : columns should be in the params
